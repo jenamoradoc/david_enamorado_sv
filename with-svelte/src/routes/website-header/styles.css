@@ -1,0 +1,201 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  max-width: 1200px;
+  margin: 0 auto; 
+}
+
+.left-column {
+  width: 60%;
+  position: relative;
+  background-image: url("./pexels-leeloothefirst-4550985.webp");
+  background-size: cover;
+  background-position: center;
+  padding: 4rem;
+  color: white;
+}
+
+.menu-btn {
+  cursor: pointer;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.menu-btn > svg {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+}
+
+.collection-info {
+  position: absolute;
+  bottom: 10rem;
+  left: 4rem;
+}
+
+.collection-info > p {
+  font-size: 0.85rem;
+  line-height: 1.25;
+  margin-bottom: 50px;
+}
+
+.collection-info > h1 {
+  font-size: 6rem;
+  line-height: 0.85;
+  font-weight: 300;
+  margin: 0;
+}
+
+.social-links {
+  position: absolute;
+  bottom: 4rem;
+  left: 4rem;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.right-column {
+  position: relative;
+  width: 40%;
+  padding: 4rem;
+  background-color: #f9f7f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.language-selector {
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.language-selector button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #333;
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+.language-selector button.active,
+.language-selector button:hover {
+  opacity: 1;
+}
+.language-selector button:focus {
+  outline: none;
+}
+
+.product-images {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.product-image {
+  width: 220px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image:first-child {
+  margin-left: auto;
+  margin-right: 4rem;
+}
+
+.product-image:last-child {
+  max-width: 160px;
+  height: 260px;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.shop-button {
+  position: absolute;
+  bottom: 4rem;
+  right: 4rem;
+  margin-left: auto;
+  width: 40%;
+  background: transparent;
+  border: 2px solid #333;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+}
+
+.shop-button:hover {
+  background-color: #333;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .left-column,
+  .right-column {
+    width: 100%;
+  }
+  .collection-info,
+  .social-links {
+    position: static;
+    margin-top: 2rem;
+  }
+  .product-images {
+    flex-direction: row;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .product-image {
+    width: 100%;
+    height: auto;
+    max-width: 220px;
+    margin: 0;
+  }
+  .product-image:first-child {
+    margin: 0;
+  }
+  .product-image:last-child {
+    max-width: 100%;
+    height: auto;
+  }
+  .shop-button {
+    position: static;
+    width: 100%;
+  }
+}
